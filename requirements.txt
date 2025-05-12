@@ -1,0 +1,17 @@
+from fpdf 
+tempfile
+os
+streamlit
+pandas
+numpy 
+matplotlib.pyplot 
+seaborn
+joblib 
+load
+sklearn.preprocessing  
+StandardScaler
+LabelEncoder
+streamlit.components.v1 
+PIL 
+Image
+base64
