@@ -1,4 +1,4 @@
-from fpdf 
+fpdf 
 tempfile
 os
 streamlit
@@ -15,3 +15,7 @@ streamlit.components.v1
 PIL 
 Image
 base64
+scikit-learn
+matplotlib
+plotly
+imbalanced-learn
