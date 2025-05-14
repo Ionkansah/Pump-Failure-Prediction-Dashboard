@@ -14,7 +14,7 @@ import base64
 
 # --- Loading Data and Preprocessor matching my training ---
 try:
-    df_original = pd.read_csv(r"/workspaces/Pump-Failure-Prediction-Dashboard/data/ai4i2020.csv")
+    df_original = pd.read_csv("data/ai4i2020.csv")
     df = df_original.copy()
     label_encoder = LabelEncoder()
     df['Type'] = label_encoder.fit_transform(df['Type'])
@@ -27,7 +27,7 @@ except FileNotFoundError:
 
 # --- Load my Trained Model saved as 'trained_model.joblib' ---
 try:
-    model = load('trained_model.joblib')
+    model = load('notebooks/trained_model.joblib')
 except FileNotFoundError:
     st.error("Error: trained_model.joblib not found. Please ensure the model file is in the same directory.")
     st.stop()
