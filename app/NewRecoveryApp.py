@@ -28,7 +28,8 @@ except FileNotFoundError:
 
 # --- Load my Trained Model saved as 'trained_model.joblib' ---
 try:
-    model = load('notebooks/trained_model.joblib')
+    model_path = "notebooks/trained_model.joblib" # Relative path to the model
+    model = load(model_path)
 except FileNotFoundError:
     st.error("Error: trained_model.joblib not found. Please ensure the model file is in the same directory.")
     st.stop()
