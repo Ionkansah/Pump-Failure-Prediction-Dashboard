@@ -14,7 +14,8 @@ import base64
 
 # --- Loading Data and Preprocessor matching my training ---
 try:
-    df_original = pd.read_csv("data/ai4i2020.csv")
+    data_file_path = "data/ai4i2020.csv"
+    df_original = pd.read_csv(data_file_path)
     df = df_original.copy()
     label_encoder = LabelEncoder()
     df['Type'] = label_encoder.fit_transform(df['Type'])
