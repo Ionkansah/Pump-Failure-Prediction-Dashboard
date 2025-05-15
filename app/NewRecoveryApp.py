@@ -185,7 +185,7 @@ if predict_button:
     if final_input.shape[1] == model.n_features_in_:
         prediction = model.predict(final_input)[0]
         st.subheader("Prediction Result")
-        if prediction == 1: st.error("⚠️ Warning: Machine is predicted to FAIL!")
+        if prediction == 1: st.error("⚠️ Warning: Machine is predicted to FAIL! The Torque, Rotational Speed or Tool Wear fatally high")
         else: st.success("✅ Machine is predicted to be operating normally. Please maintain similar conditions")
     else: st.error(f"Error: Input data shape mismatch.")
 
