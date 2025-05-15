@@ -108,11 +108,11 @@ Your default web browser should open a new tab with the dashboard running.
 ## How to Use the Dashboard
 The dashboard provides a straightforward interface:
 
-*Sidebar: Provides information about IONARTS Projects Consult, contact details, links, visualization customization controls, and a company description pop-out.
+* **Sidebar**: Provides information about IONARTS Projects Consult, contact details, links, visualization customization controls, and a company description pop-out.
 
-*Real-time Prediction: Use the input fields under "Predict Machine Failure" to enter parameters for a single pump and get an instant prediction.
+* **Real-time Prediction**: Use the input fields under "Predict Machine Failure" to enter parameters for a single pump and get an instant prediction.
 
-*Batch Prediction: Use the file uploader under "Upload Data for Batch Prediction (CSV)" to upload a CSV file with your data (ensure it has the required columns).
+* **Batch Prediction**: Use the file uploader under "Upload Data for Batch Prediction (CSV)" to upload a CSV file with your data (ensure it has the required columns).
 
 * The dashboard will display visualizations of your input data in the "Visualize Uploaded Input Data" expander. It will then show the prediction results in a table with a "Predicted Failure" column.
 * Explore post-prediction insights using the provided charts (Failure Distribution, Feature Distributions, Correlation Heatmap, Boxplots).
@@ -145,12 +145,12 @@ The project relies on the libraries listed in requirements.txt, including:
 * A/B testing of different UI layouts and features.
 * Deployment to a production environment (e.g., Streamlit Community Cloud, AWS, Azure).
 
-License: MIT
+### License: MIT
 
-## Contact
+### Contact
 Developed by Isaac Opoku Nkansah for IONARTS Projects Consult.
 
-## For inquiries, please contact:
-Email: isaac3g@outlook.com
-Phone: +447392615042
-Website: https://github.com/Ionkansah/
+### For inquiries, please contact:
+* Email: isaac3g@outlook.com
+* Phone: +447392615042
+* Website: https://github.com/Ionkansah/
