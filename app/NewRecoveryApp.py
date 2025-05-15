@@ -28,7 +28,7 @@ except FileNotFoundError:
 
 # --- Load my Trained Model saved as 'trained_model.joblib' ---
 try:
-    model_path = "notebooks/trained_model.joblib" # Relative path to the model
+    model_path = "app/notebooks/trained_model.joblib" # Relative path to the model
     model = load(model_path)
 except FileNotFoundError:
     st.error("Error: trained_model.joblib not found. Please ensure the model file is in the same directory.")
@@ -111,7 +111,7 @@ def set_background(image_file):
 
 # --- Set background image ---
 try:
-    image_path = r"C:\Users\HP\Documents\DATASCIENCE PRODUCT FOR PREDICTIVE MAINTENANCE\Jupyter env\data\Pipes7.jpeg"
+    image_path = "data/Pipes7.jpeg"
     image = Image.open(image_path)
     # target_width = 300 # Adjust this width value
     # aspect_ratio = image.height / image.width
