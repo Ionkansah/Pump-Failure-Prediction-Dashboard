@@ -186,7 +186,7 @@ if predict_button:
         prediction = model.predict(final_input)[0]
         st.subheader("Prediction Result")
         if prediction == 1: st.error("⚠️ Warning: Machine is predicted to FAIL! The Torque, Rotational Speed or Tool Wear fatally high")
-        else: st.success("✅ Machine is predicted to be operating normally. Please maintain similar conditions to maintain performance")
+        else: st.success("✅ Machine is predicted to be operating normally. Please maintain these conditions to continue optimal performance")
     else: st.error(f"Error: Input data shape mismatch.")
 
 # --- ION(bi95cz) Poduct for Batch Prediction Section ---
