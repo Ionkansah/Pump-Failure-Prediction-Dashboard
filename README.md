@@ -86,13 +86,11 @@ imbalanced-learn
 
 ### 4. Obtain Data and Model Files
 You need the dataset (ai4i2020.csv) used for the scaler and the trained model file (trained_model.joblib). 
-a. ai4i2020.csv: This file should be placed in a directory named data in the root of your project. Create the folder if it doesn't exist.
-your-project-root/
-├── data/
-│   └── ai4i2020.csv  <-- Place the CSV file here
-└── ...
+* a. ai4i2020.csv: This file should be placed in a directory named data in the root of your project. Create the folder if it doesn't exist.
+![image](https://github.com/user-attachments/assets/23b890a4-2e77-433a-8ff6-4a6ff7c51924)
 
-b. trained_model.joblib: This file containing your trained machine learning model should be placed in the root directory of your project (the same directory as NewRecoveryApp.py).
+
+* b. trained_model.joblib: This file containing your trained machine learning model should be placed in the root directory of your project (the same directory as NewRecoveryApp.py).
 your-project-root/
 ├── trained_model.joblib  <-- Place the model file here
 └── ...
