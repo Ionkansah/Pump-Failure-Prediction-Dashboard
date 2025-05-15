@@ -180,7 +180,8 @@ if predict_button:
                             'Rotational speed [rpm]', 'Torque [Nm]', 'Tool wear [min]']
     binary_features = ['TWF', 'HDF', 'PWF', 'OSF', 'RNF']
     scaled_numerical = scaler.transform(input_data[numerical_features])
-    final_input = np.concatenate([scaled_numerical, input_data[binary_features].values], axis=1)
+    final_input = scaled_numerical
+    
     if final_input.shape[1] == model.n_features_in_:
         prediction = model.predict(final_input)[0]
         st.subheader("Prediction Result")
@@ -234,9 +235,10 @@ if uploaded_file is not None:
         required_binary = ['TWF', 'HDF', 'PWF', 'OSF', 'RNF']
         all_required = required_numerical + required_binary
         if all(col in batch_data_input.columns for col in all_required):
-            scaled_numerical = scaler.transform(batch_data_input[required_numerical])
+            scaled_numerical_batch = scaler.transform(batch_data_input[required_numerical])
             binary_data = batch_data_input[required_binary].values
-            final_batch_input = np.concatenate([scaled_numerical, binary_data], axis=1)
+            final_batch_input = scaled_numerical_batch
+            
             if final_batch_input.shape[1] == model.n_features_in_:
                 batch_predictions = model.predict(final_batch_input)
                 batch_data_display = batch_data_input.copy()
