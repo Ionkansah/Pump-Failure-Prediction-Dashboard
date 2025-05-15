@@ -56,11 +56,11 @@ cd <Pump-Failure-Prediction-Dashboard>
 
 ### 2. Set up a Virtual Environment (I personally recommend this method)
 Creating a virtual environment helps manage project dependencies.
-# On macOS/Linux
+### On macOS/Linux
 python3 -m venv .venv
 source .venv/bin/activate
 
-# On Windows
+### On Windows
 python -m venv .venv
 .venv\Scripts\activate
 
@@ -86,16 +86,16 @@ imbalanced-learn
 
 ### 4. Obtain Data and Model Files
 You need the dataset (ai4i2020.csv) used for the scaler and the trained model file (trained_model.joblib). 
-* a. ai4i2020.csv: This file should be placed in a directory named data in the root of your project. Create the folder if it doesn't exist.
+* **ai4i2020.csv**: This file should be placed in a directory named data in the root of your project. Create the folder if it doesn't exist.
 ![image](https://github.com/user-attachments/assets/23b890a4-2e77-433a-8ff6-4a6ff7c51924)
 
 
-* b. trained_model.joblib: This file containing your trained machine learning model should be placed in the root directory of your project (the same directory as NewRecoveryApp.py).
+* **trained_model.joblib**: This file containing your trained machine learning model should be placed in the root directory of your project (the same directory as NewRecoveryApp.py).
 your-project-root/
 ├── trained_model.joblib  <-- Place the model file here
 └── ...
 
-c. Background Image (You can choose to add or not. I love aesthetical appeal so I recommend): If you used a custom background image, ensure that file is also in your project, and the path in NewRecoveryApp.py is correct relative to where you run the script. Make sure these files are in the correct relative locations as expected by the Python script.
+* **Background Image** (You can choose to add or not. I love aesthetical appeal so I recommend): If you used a custom background image, ensure that file is also in your project, and the path in NewRecoveryApp.py is correct relative to where you run the script. Make sure these files are in the correct relative locations as expected by the Python script.
 
 ### 5. Run the Streamlit App
 From the root directory of your project, with your virtual environment activated:
@@ -108,40 +108,42 @@ Your default web browser should open a new tab with the dashboard running.
 ## How to Use the Dashboard
 The dashboard provides a straightforward interface:
 
-Sidebar: Provides information about IONARTS Projects Consult, contact details, links, visualization customization controls, and a company description pop-out.
-Real-time Prediction: Use the input fields under "Predict Machine Failure" to enter parameters for a single pump and get an instant prediction.
-Batch Prediction: Use the file uploader under "Upload Data for Batch Prediction (CSV)" to upload a CSV file with your data (ensure it has the required columns).
-The dashboard will display visualizations of your input data in the "Visualize Uploaded Input Data" expander.
-It will then show the prediction results in a table with a "Predicted Failure" column.
-Explore post-prediction insights using the provided charts (Failure Distribution, Feature Distributions, Correlation Heatmap, Boxplots).
-Customize Visualizations: Use the controls in the sidebar under "🎨 Visualization Customization" to change the color palettes of the charts and plots.
-Download Report: If you've uploaded batch data and predictions were made, the "📥 Generate Downloadable Report (PDF)" expander will allow you to download a PDF summary.
-AI Agent Support: Click the "Isaac: Prediction Support Agent" button to open a chat window for assistance.
-Leave Feedback: Use the embedded form at the bottom to provide feedback on the dashboard.
+*Sidebar: Provides information about IONARTS Projects Consult, contact details, links, visualization customization controls, and a company description pop-out.
+
+*Real-time Prediction: Use the input fields under "Predict Machine Failure" to enter parameters for a single pump and get an instant prediction.
+
+*Batch Prediction: Use the file uploader under "Upload Data for Batch Prediction (CSV)" to upload a CSV file with your data (ensure it has the required columns).
+
+* The dashboard will display visualizations of your input data in the "Visualize Uploaded Input Data" expander. It will then show the prediction results in a table with a "Predicted Failure" column.
+* Explore post-prediction insights using the provided charts (Failure Distribution, Feature Distributions, Correlation Heatmap, Boxplots).
+
+* **Customize Visualizations**: Use the controls in the sidebar under "🎨 Visualization Customization" to change the color palettes of the charts and plots.
+* **Download Report**: If you've uploaded batch data and predictions were made, the "📥 Generate Downloadable Report (PDF)" expander will allow you to download a PDF summary.
+* **AI Agent Support**: Click the "Isaac: Prediction Support Agent" button to open a chat window for assistance.
+* **Leave Feedback**: Use the embedded form at the bottom to provide feedback on the dashboard.
 
 Ensure your trained_model.joblib is either in the root or in the notebooks/ folder and the path in NewRecoveryApp.py is updated accordingly.
 
 Dependencies
 The project relies on the libraries listed in requirements.txt, including:
-
-streamlit: For building the web application.
-pandas, numpy: For data manipulation.
-scikit-learn: For the ML model and preprocessing (StandardScaler, LabelEncoder).
-joblib: For loading the trained model.
-matplotlib, seaborn, plotly: For data visualization.
-Pillow: For image handling (used for the background).
-fpdf: For PDF report generation.
-imbalanced-learn: (Included in requirements, potentially used during model training).
+* **streamlit**: For building the web application.
+* **pandas, numpy**: For data manipulation.
+* **scikit-learn**: For the ML model and preprocessing (StandardScaler, LabelEncoder).
+* **joblib**: For loading the trained model.
+* **matplotlib, seaborn, plotly**: For data visualization.
+* **Pillow**: For image handling (used for the background).
+* **fpdf**: For PDF report generation.
+* **imbalanced-learn**: (Included in requirements, potentially used during model training).
 
 ## Future Enhancements
-a. Integration with real-time sensor data streams.
-b. Development of more advanced machine learning models.
-c. Enhanced error handling and data validation for uploaded CSVs.
-d. Implementation of user authentication and authorization for secure deployment.
-e. More sophisticated visualization options and interactivity.
-d. Training on larger and more diverse oil pump datasets.
-e. A/B testing of different UI layouts and features.
-f. Deployment to a production environment (e.g., Streamlit Community Cloud, AWS, Azure).
+* Integration with real-time sensor data streams.
+* Development of more advanced machine learning models.
+* Enhanced error handling and data validation for uploaded CSVs.
+* Implementation of user authentication and authorization for secure deployment.
+* More sophisticated visualization options and interactivity.
+* Training on larger and more diverse oil pump datasets.
+* A/B testing of different UI layouts and features.
+* Deployment to a production environment (e.g., Streamlit Community Cloud, AWS, Azure).
 
 License: MIT
 
