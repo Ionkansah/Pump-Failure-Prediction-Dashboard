@@ -72,30 +72,25 @@ pip install -r requirements.txt
 ```
 
 The requirements.txt file contains the list of necessary packages:
-streamlit
-pandas
-numpy
-matplotlib
-seaborn
-joblib
-scikit-learn
-Pillow
-fpdf
-plotly
+streamlit,
+pandas,
+numpy,
+matplotlib,
+seaborn,
+joblib,
+scikit-learn,
+Pillow,
+fpdf,
+plotly,
 imbalanced-learn
 
 ### 4. Obtain Data and Model Files
 You need the dataset (ai4i2020.csv) used for the scaler and the trained model file (trained_model.joblib). 
 * **ai4i2020.csv**: This file should be placed in a directory named data in the root of your project. Create the folder if it doesn't exist.
-![image](https://github.com/user-attachments/assets/23b890a4-2e77-433a-8ff6-4a6ff7c51924)
-
-
 * **trained_model.joblib**: This file containing your trained machine learning model should be placed in the root directory of your project (the same directory as NewRecoveryApp.py).
-your-project-root/
-├── trained_model.joblib  <-- Place the model file here
-└── ...
-
 * **Background Image** (You can choose to add or not. I love aesthetical appeal so I recommend): If you used a custom background image, ensure that file is also in your project, and the path in NewRecoveryApp.py is correct relative to where you run the script. Make sure these files are in the correct relative locations as expected by the Python script.
+![Screenshot 2025-05-17 232729](https://github.com/user-attachments/assets/c89ce6ef-0cd2-45bc-afca-6324919db9b6)
+
 
 ### 5. Run the Streamlit App
 From the root directory of your project, with your virtual environment activated:
