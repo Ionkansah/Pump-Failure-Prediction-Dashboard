@@ -124,7 +124,7 @@ The dashboard provides a straightforward interface:
 
 Ensure your trained_model.joblib is either in the root or in the notebooks/ folder and the path in NewRecoveryApp.py is updated accordingly.
 
-Dependencies
+**Dependencies**-
 The project relies on the libraries listed in requirements.txt, including:
 * **streamlit**: For building the web application.
 * **pandas, numpy**: For data manipulation.
