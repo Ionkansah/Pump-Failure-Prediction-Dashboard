@@ -6,35 +6,41 @@ The Oil Pump Predictive Failure Dashboard  is a bespoke data science product dsi
 
 This dashboard addresses the industry's need to move beyond traditional reactive or scheduled maintenance by providing data-driven informaition into equipment health. It offers functionalities for both real-time single-pump prediction and comprehensive batch analysis of historical or fleet data.
 
-## Features
+## Title and Description
 
-* **Real-time Single Prediction:** Predict the failure status of a single oil pump by manually entering its key operational parameters.
-* **Batch Prediction:** Upload a CSV file containing data for multiple pumps to get failure predictions for the entire batch.
-* **Input Data Visualization:** Explore the characteristics and trends of your uploaded batch data *before* prediction.
-* **Post-Prediction Analysis:** Gain insights into the predicted failures within your batch data through various visualizations (failure distribution, feature distributions, correlation heatmap, boxplots).
-* **Downloadable PDF Reports:** Generate and download a PDF report summarizing the batch prediction analysis and key visualizations.
-* **Customizable Visualizations:** Adjust the color palettes of charts and plots via controls in the sidebar.
-* **AI Support Agent:** Access "Isaac," an AI-powered and technically trained support agent, via a lightbox button for assistance with the dashboard.
-* **User Feedback:** Provide your expert feedback through an embedded form to help improve the dashboard.
-* **Responsive UI:** A user-friendly interface built with Streamlit.
+**Project Title:** ION Oil Pump Predictive Failure Dashboard
 
-## Project Motivation and Background
+**Description:** The ION Oil Pump Predictive Failure Dashboard is a user-friendly data science application developed by Isaac Opoku Nkansah for IONARTS Projects Consult. It provides tools for predicting potential failures in oil pumps based on operational data, facilitating proactive maintenance and risk management within the oil and gas sector. The dashboard supports both real-time single predictions and batch analysis of historical data, offering valuable insights through visualizations and downloadable reports.
 
-Traditional maintenance methods in the oil and gas industry often lead to significant operational inefficiencies, unplanned downtime, and increased costs (Achouch et al., 2022). The literature emphasizes the transformative potential of data science and predictive maintenance in addressing these challenges (Saxena, 2025). When operational data are analysed, it's possible to anticipate equipment failures and schedule maintenance proactively, leading to enhanced reliability and reduced environmental impact (Ozowe et al., 2024).
+## API Reference
 
-This project was undertaken as an individual R&D initiative to design and develop a practical data science product that makes these advanced capabilities accessible to domain experts who may not have extensive data science backgrounds. The goal was to create a user-friendly tool that directly supports the transition to a data-driven maintenance strategy within the oil and gas sector.
+This project is a web-based dashboard application and can be accessed for integrations [here](https://pumpfailureprediction-bi95cz.streamlit.app/?embed_options=show_toolbar,light_theme,show_colored_line,show_padding,disable_scrolling,show_footer,dark_theme)
 
-## Technical Report Summary
+## Appendix
 
-A comprehensive technical report detailing the design, development, and project management of this dashboard is available in the repository data/Technical-Report
+Appendices related to the project, such as detailed dataset descriptions, model training specifics, or comprehensive evaluation results, are included in the [Project Technical Report](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing).
 
-Key aspects covered in the report include:
+## Author
 
-* **Product Design:** Discusses the selection of the AI4I 2020 dataset, the analysis of end-user requirements (need for ease of use, actionable insights), functional and non-functional requirements specifications, the Streamlit-based software architecture, and detailed use case specifications (single prediction, batch analysis, customization, support, feedback).
-* **Product Development:** Covers the selection of Python and key libraries (Pandas, Scikit-learn, Seaborn, FPDF, Streamlit) as development tools, highlights the use of an Agile/Iterative software engineering methodology, describes the system testing approach (primarily manual/UAT), and outlines a plan for formal user evaluation.
-* **Project Management:** Addresses time management (illustrated hypothetically with a Gantt chart structure), discusses risk assessment focusing on data security and personal information protection, outlines quality control measures during development, describes basic customer/user relationship management via integrated feedback and support channels, and proposes a basic product marketing strategy targeting the oil and gas maintenance sector.
+Isaac Opoku Nkansah (bi95cz)
 
-The report provides a critical discussion of the choices made throughout the project lifecycle, supported by references from academic literature.
+## Color Reference
+
+The dashboard includes a **Visualization Customization** section in the sidebar allowing users to select color palettes for categorical plots (histograms, boxplots) and heatmaps, as well as a specific color for the numerical feature line plot. 
+The default palettes are 'Set1' for categorical plots and 'coolwarm' for heatmaps, with a default blue for the line plot. Users can interactively change these via the sidebar controls.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please feel free to:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/YourFeature`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add YourFeature'`).
+5.  Push to the branch (`git push origin feature/YourFeature`).
+6.  Open a Pull Request.
+
+Please ensure your code adheres to standard Python style guides like PEP 8 and include appropriate documentation and tests if applicable.
 
 ## Getting Started
 
@@ -130,15 +136,31 @@ The project relies on the libraries listed in requirements.txt, including:
 * **fpdf**: For PDF report generation.
 * **imbalanced-learn**: (Included in requirements, potentially used during model training).
 
-## Future Enhancements
-* Integration with real-time sensor data streams.
-* Development of more advanced machine learning models.
-* Enhanced error handling and data validation for uploaded CSVs.
-* Implementation of user authentication and authorization for secure deployment.
-* More sophisticated visualization options and interactivity.
-* Training on larger and more diverse oil pump datasets.
-* A/B testing of different UI layouts and features.
-* Deployment to a production environment (e.g., Streamlit Community Cloud, AWS, Azure).
+## Documentation
+
+The primary documentation for this project is the [Project Technical Report](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing). This report provides a critical, referenced discussion on the project's design, development, and management.
+
+Additional documentation is available through:
+
+* **Code Comments:** Explanations within the `NewRecoveryApp.py` script.
+* **README File:** This document serves as a quick start guide and overview.
+
+## FAQ
+
+* **Q: What kind of data does the dashboard accept for batch prediction?**
+    * **A:** The dashboard accepts CSV files with specific column headings corresponding to the operational parameters and binary failure flags used by the model. Required columns include: `Air temperature [K]`, `Process temperature [K]`, `Rotational speed [rpm]`, `Torque [Nm]`, `Tool wear [min]`, `TWF`, `HDF`, `PWF`, `OSF`, `RNF`. It also uses `Product ID` and `Type` for visualization.
+* **Q: Is the model retrained by the dashboard?**
+    * **A:** No, the dashboard loads a pre-trained model (`trained_model.joblib`). The scaler is fit on the `ai4i2020.csv` dataset each time the app runs to ensure consistency, but the ML model itself is static.
+* **Q: How accurate are the predictions?**
+    * **A:** The accuracy depends on the performance of the `trained_model.joblib` file used. This model was trained on a specific dataset (AI4I 2020). For real-world use, retraining on your specific operational data is recommended to improve relevance and accuracy.
+
+  ## Usage/Examples
+
+Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing), for detailed instructions on using the dashboard's features, including manual input, batch data upload, and visualization customization.You can also view this Readme 
+
+## Used By
+- Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
+- Other interested users who find its need in their own domains.
 
 ### License: MIT
 
