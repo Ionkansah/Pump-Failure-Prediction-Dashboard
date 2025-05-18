@@ -152,9 +152,13 @@ Additional documentation is available through:
 
 Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing), for detailed instructions on using the dashboard's features, including manual input, batch data upload, and visualization customization.You can also view this Readme 
 
-## Used By
+## Using the Product
+* **Domain Targets**
 - Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
 - Other interested users who find its need in their own domains.
+
+* **User Access**
+  - To begin your predictions, access the deployed product [here](https://pumpfailureprediction-bi95cz.streamlit.app/)
 
 ### License: MIT
 
