@@ -1,11 +1,5 @@
 # Oil Pump Predictive Failure Dashboard
 
-## Project Overview
-
-The Oil Pump Predictive Failure Dashboard  is a bespoke data science product dsigned and developed by Isaac Opoku Nkansah with a pseudonym prototype domain business IONARTS Projects Consult. It is designed to empower maintenance engineers and reliability analysts in the oil and gas sector with an easy-to-use tool for predicting potential failures in oil pumps. With the use of machine learning and data analytics, the dashboard facilitates a proactive approach to maintenance, aiming to reduce unplanned downtime, optimize operational efficiency, and support informed decision-making.
-
-This dashboard addresses the industry's need to move beyond traditional reactive or scheduled maintenance by providing data-driven informaition into equipment health. It offers functionalities for both real-time single-pump prediction and comprehensive batch analysis of historical or fleet data.
-
 ## Title and Description
 
 **Project Title:** ION Oil Pump Predictive Failure Dashboard
