@@ -148,11 +148,10 @@ Additional documentation is available through:
 * **Q: How accurate are the predictions?**
     **A:** The accuracy depends on the performance of the `trained_model.joblib` file used. This model was trained on a specific dataset (AI4I 2020). For real-world use, retraining on your specific operational data is recommended to improve relevance and accuracy.
 
-  ## Usage/Examples
-
+ ## Using the Product
+* **Tutorial Example**
 Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing), for detailed instructions on using the dashboard's features, including manual input, batch data upload, and visualization customization.You can also view this Readme 
 
-## Using the Product
 * **Domain Targets**
   - Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
   - Other interested users who find its need in their own domains.
