@@ -142,11 +142,11 @@ Additional documentation is available through:
 ## FAQ
 
 * **Q: What kind of data does the dashboard accept for batch prediction?**
-    * **A:** The dashboard accepts CSV files with specific column headings corresponding to the operational parameters and binary failure flags used by the model. Required columns include: `Air temperature [K]`, `Process temperature [K]`, `Rotational speed [rpm]`, `Torque [Nm]`, `Tool wear [min]`, `TWF`, `HDF`, `PWF`, `OSF`, `RNF`. It also uses `Product ID` and `Type` for visualization.
+    **A:** The dashboard accepts CSV files with specific column headings corresponding to the operational parameters and binary failure flags used by the model. Required columns include: `Air temperature [K]`, `Process temperature [K]`, `Rotational speed [rpm]`, `Torque [Nm]`, `Tool wear [min]`, `TWF`, `HDF`, `PWF`, `OSF`, `RNF`. It also uses `Product ID` and `Type` for visualization.
 * **Q: Is the model retrained by the dashboard?**
-    * **A:** No, the dashboard loads a pre-trained model (`trained_model.joblib`). The scaler is fit on the `ai4i2020.csv` dataset each time the app runs to ensure consistency, but the ML model itself is static.
+    **A:** No, the dashboard loads a pre-trained model (`trained_model.joblib`). The scaler is fit on the `ai4i2020.csv` dataset each time the app runs to ensure consistency, but the ML model itself is static.
 * **Q: How accurate are the predictions?**
-    * **A:** The accuracy depends on the performance of the `trained_model.joblib` file used. This model was trained on a specific dataset (AI4I 2020). For real-world use, retraining on your specific operational data is recommended to improve relevance and accuracy.
+    **A:** The accuracy depends on the performance of the `trained_model.joblib` file used. This model was trained on a specific dataset (AI4I 2020). For real-world use, retraining on your specific operational data is recommended to improve relevance and accuracy.
 
   ## Usage/Examples
 
@@ -157,9 +157,6 @@ Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKF
 - Other interested users who find its need in their own domains.
 
 ### License: MIT
-
-### Contact
-Developed by Isaac Opoku Nkansah for IONARTS Projects Consult.
 
 ### For inquiries, please contact:
 * Email: isaac3g@outlook.com
