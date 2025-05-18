@@ -154,8 +154,8 @@ Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKF
 
 ## Using the Product
 * **Domain Targets**
-- Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
-- Other interested users who find its need in their own domains.
+  - Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
+  - Other interested users who find its need in their own domains.
 
 * **User Access**
   - To begin your predictions, access the deployed product [here](https://pumpfailureprediction-bi95cz.streamlit.app/)
