@@ -150,7 +150,7 @@ Additional documentation is available through:
 
  ## Using the Product
 * **Tutorial Example**
-  - Watch the [Project Video Tutorial](https://drive.google.com/file/d/10VpD8HawbZKFxOwlMkuZFlYx8P5I1I3_/view?usp=sharing), for detailed instructions on using the dashboard's features, including manual input, batch data upload, and visualization customization.You can also view this Readme 
+  - Watch the [Project Video Tutorial](https://youtu.be/cCzXB5hAXd4), for detailed instructions on using the dashboard's features, including manual input, batch data upload, and visualization customization.You can also view this Readme 
 
 * **Domain Targets**
   - Majorly Maintenance Managers, Reliability Engineers, Operations Supervisors in Oil & Gas companies
